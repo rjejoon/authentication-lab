@@ -1,0 +1,17 @@
+1. Default auth scheme: session authentication. You can manage the authentication schemes through 'DEFAULT_AUTHENTICATION_CLASSES' in settings.py.
+
+2. Basic authentication
+
+3. The session authentication makes the server store the authentication details while the token authentication makes the user store the authentication details.
+
+   The token authentication is an improvement over the basic authentication because the latter is encoded in base64 while the former is not. Base64 encoded strings can be easily decoded.
+
+4. bitbucket.org requests authorization to access service resources from Google. 
+
+    If Google authorizes the request, then bitbucket.org receives an authorization grant. bitbucket.org requests an access token from Google's authorization server by presenting authentication of its own identity and the authorization grant. 
+
+    If they are valid, Google's authorization server issues an access token to bitbucket.org. 
+
+    Finally, bitbucket.org requests the user account resource from Google's resource server and presents the access token for authentication. The resource server serves the user account to bitbucket.org if the access token is valid.
+
+5. https://github.com/rjejoon/authentication-lab
